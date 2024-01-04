@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import RecipeCard from "../components/design/RecipeCard";
 import Loading from "../components/design/Loading";
-//import ApiError from "../components/design/ApiError";
 import { useFetch } from "../components/hook/useFetch";
 
 function Category() {
@@ -18,20 +16,18 @@ function Category() {
 
   return (
     <>
-      <Helmet>
+      <div>
         <meta charSet="utf-8" />
         <title>{id.toUpperCase()} - React recipe finder</title>
         <link
           rel="canonical"
           href={`https://react-recipe-finder-2022.netlify.app/category/${id}`}
         />
-      </Helmet>
+      </div>
 
       {isLoading && <Loading message={`Loading ${id} foods`} />}
 
-      //{!isLoading && apiError && <ApiError />}
-
-      {!isLoading &&  (
+      {!isLoading && (
         <section className="py-8">
           {reqData?.results.length > 0 ? (
             <div className="space-y-6">

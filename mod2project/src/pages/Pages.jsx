@@ -16,7 +16,6 @@ function Pages() {
         <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/search/:id" element={<Search />} />
-        {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
     </Layout>
   );

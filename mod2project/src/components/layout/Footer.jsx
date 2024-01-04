@@ -4,16 +4,10 @@ function Footer() {
   return (
     <footer className="bg-gray mt-auto w-full h-full py-8 ">
       <div className="container flex items-center justify-between gap-8">
-        <p>©{new Date().getFullYear()} CookRecipes - All rights reserved.</p>
+        <p>©2024 Let's Cook - All rights reserved.</p>
         <p>
-          Made by{" "}
-          {/* <a
-            target="_blank"
-            className="font-bold"
-            href="https://sujoykh.vercel.app"
-          > */}
-            Santoshi
-          {/* </a> */}
+          Made by <span className="font-bold">Santoshi</span>
+          
           , build with <span className="font-bold">React.js,</span>{" "}
           <span className="font-bold">Tailwind CSS</span>,{" "}
           <a
