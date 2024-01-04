@@ -40,7 +40,7 @@ function Navbar() {
               {/* <h1 className="text-3xl font-bold cursor-pointer">CookRecipes</h1> */}
               <img
                             src="https://th.bing.com/th/id/OIG.cz2Fwoqa4ZWomzc6q0SH?pid=ImgGn"
-                            className="w-64 h-48"
+                            className="w-80 h-48 rounded-full"
                             alt="Logo"
                         />
               
