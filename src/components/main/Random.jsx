@@ -4,11 +4,9 @@ import Loading from "../design/Loading";
 
 function Random() {
   const [popular, setPopular] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true); // Assuming initial loading state
 
   const getPopular = async (url) => {
-    setLoading(true);
-
     try {
       const cachedData = localStorage.getItem("popular");
 
@@ -39,23 +37,19 @@ function Random() {
       }&number=8`
     );
   }, []);
-//console.log(getPopular)
+
   return (
-    <>
+    <section className="py-8">
       {isLoading && <Loading message={`Loading recipes`} />}
 
-      {!isLoading && (
-        <section className="py-8">
-          <h1 className="font-bold text-2xl mb-6">Popular Recipes</h1>
+      <h1 className="font-bold text-2xl mb-6">Popular Recipes</h1>
 
-          <div className="grid grid-cols-4 gap-4">
-            {popular.map((data) => (
-              <RecipeCard key={data.id} data={data} />
-            ))}
-          </div>
-        </section>
-      )}
-    </>
+      <div className="grid grid-cols-4 gap-4">
+        {popular.map((data) => (
+          <RecipeCard key={data.id} data={data} />
+        ))}
+      </div>
+    </section>
   );
 }
 

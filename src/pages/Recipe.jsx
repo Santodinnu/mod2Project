@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import ApiError from "../components/design/ApiError";
 import { useFetch } from "../components/hook/useFetch";
-import LoadingContent from "../components/design/LoadingContent";
+
 
 const nav = [
   {
@@ -19,7 +18,7 @@ function Recipe() {
 
   const [activeTab, setActiveTab] = useState("ingredients");
 
-  const { isLoading, apiError, reqData } = useFetch(
+  const { reqData } = useFetch(
     `https://api.spoonacular.com/recipes/${id}/information?apiKey=${
       import.meta.env.VITE_API_KEY
     }`
