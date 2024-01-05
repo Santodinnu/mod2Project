@@ -38,7 +38,7 @@ function Navbar() {
           <div className="flex items-center justify-between gap-4 py-4">
             <Link to="/">
               {/* <h1 className="text-3xl font-bold cursor-pointer">CookRecipes</h1> */}
-              <img
+              <img 
                             src="https://th.bing.com/th/id/OIG.cz2Fwoqa4ZWomzc6q0SH?pid=ImgGn"
                             className="w-80 h-48 rounded-full"
                             alt="Logo"
@@ -51,7 +51,7 @@ function Navbar() {
           <nav className="flex items-center gap-8">
             {category.map((data) => (
               <NavLink key={data.name} to={data.url}>
-                <p className="py-4 border-b-2 border-b-transparent hover:border-b-black cursor-pointer duration-200">
+                <p className="py-4 font-bold border-b-2 border-b-transparent hover:border-b-black cursor-pointer duration-200">
                   {data.name}
                 </p>
               </NavLink>
