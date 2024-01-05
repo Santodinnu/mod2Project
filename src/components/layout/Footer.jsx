@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="bg-gray mt-auto w-full h-full py-8 ">
       <div className="container flex items-center justify-between gap-8">
-        <p>©{new Date().getFullYear()} Let's Cook - All rights reserved.</p>
+        <p>©2024 Let's Cook</p>
         <p>
           Made by <span className="font-bold">Santoshi</span>
           

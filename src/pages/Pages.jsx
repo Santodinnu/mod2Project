@@ -3,7 +3,7 @@ import Home from "./Home";
 import Category from "./Category";
 import Search from "./Search";
 import Recipe from "./Recipe";
-import PageNotFound from "./PageNotFound";
+
 
 import { Routes, Route } from "react-router-dom";
 import Layout from "../components/layout/Layout";
@@ -16,7 +16,6 @@ function Pages() {
         <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/search/:id" element={<Search />} />
-        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Layout>
   );

@@ -39,7 +39,7 @@ function Random() {
       }&number=8`
     );
   }, []);
-console.log(getPopular)
+//console.log(getPopular)
   return (
     <>
       {isLoading && <Loading message={`Loading recipes`} />}

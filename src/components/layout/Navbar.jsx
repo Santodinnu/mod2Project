@@ -39,7 +39,7 @@ function Navbar() {
             <Link to="/">
               <img 
                             src="https://th.bing.com/th/id/OIG.cz2Fwoqa4ZWomzc6q0SH?pid=ImgGn"
-                            className="w-64 h-48 rounded-full"
+                            className="w-64 h-64 rounded-full"
                             alt="Logo"
                         />
               

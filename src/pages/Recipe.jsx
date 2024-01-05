@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import ApiError from "../components/design/ApiError";
 import { useFetch } from "../components/hook/useFetch";
 import LoadingContent from "../components/design/LoadingContent";
 
 const nav = [
   {
-    name: "Instructions",
-    tab: "instructions",
-  },
-  {
     name: "Ingredients",
     tab: "ingredients",
+  },
+  {
+    name: "Instructions",
+    tab: "instructions",
   },
 ];
 function Recipe() {
   const { id } = useParams();
 
-  const [activeTab, setActiveTab] = useState("instructions");
+  const [activeTab, setActiveTab] = useState("ingredients");
 
   const { isLoading, apiError, reqData } = useFetch(
     `https://api.spoonacular.com/recipes/${id}/information?apiKey=${
@@ -28,26 +27,7 @@ function Recipe() {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        {isLoading ? (
-          <title>Loading... </title>
-        ) : (
-          <title>
-            {!apiError ? reqData?.title : "Api Error - try again later"}
-          </title>
-        )}
-        <link
-          rel="canonical"
-          href={`https://react-recipe-finder-2022.netlify.app/recipe/${id}`}
-        />
-      </Helmet>
-
-      {isLoading && <LoadingContent message="Loading" />}
-
-      {!isLoading && apiError && <ApiError />}
-
-      {!isLoading && !apiError && (
+      {
         <section className="py-16 h-full min-h-screen">
           <div className="space-y-4 mb-8">
             <h1 className="text-3xl font-bold">{reqData?.title}</h1>
@@ -57,7 +37,7 @@ function Recipe() {
             />
           </div>
 
-          <div className="flex items-start gap-8 justify-between ">
+          <div className="flex items-start gap-8 justify-between">
             <div className="flex-1 space-y-4">
               <div className="flex gap-8">
                 {nav.map((data) => (
@@ -110,35 +90,9 @@ function Recipe() {
             </div>
           </div>
         </section>
-      )}
+      }
     </>
   );
 }
 
 export default Recipe;
-
-// useEffect data fetching -
-
-// const [details, setDetails] = useState({});
-// const [apiError, setApiError] = useState(false);
-// const [isLoading, setLoading] = useState(false);
-
-// const getDetails = async (id) => {
-//   setLoading(true);
-//   const res = await fetch(
-//     `https://api.spoonacular.com/recipes/${id}/information?apiKey=${
-//       import.meta.env.VITE_API_KEY
-//     }`
-//   );
-
-//   const data = await res.json();
-//   if (data.code === 402) {
-//     setApiError(true);
-//   }
-//   setDetails(data);
-//   setLoading(false);
-// };
-
-// useEffect(() => {
-//   getDetails(id);
-// }, [id]);

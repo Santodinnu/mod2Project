@@ -12,7 +12,7 @@ function SearchBar() {
   };
   return (
     <form
-      className="flex gap-2 items-center bg-white rounded-xl px-4"
+      className="flex gap-2 items-center bg-white rounded-xl px-8"
       onSubmit={handleSubmit}
     >
       <input
