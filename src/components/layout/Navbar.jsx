@@ -38,7 +38,7 @@ const category = [
 function Navbar() {
   return (
     <>
-      <header className="bg-teal-200 pt-6"> 
+      <header className="bg-gradient-to-r from-teal-500 to-gray-500 pt-6"> 
         <section className="container">
           <div className="flex items-center justify-between gap-4 py-4">
             <Link to="/">
