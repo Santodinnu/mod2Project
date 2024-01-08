@@ -1,13 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import RecipeCard from "../components/design/RecipeCard";
-import Loading from "../components/design/Loading";
 import { useFetch } from "../components/hook/useFetch";
 
 function Category() {
   const { id } = useParams();
 
-  const { isLoading, reqData } = useFetch(
+  const {  reqData } = useFetch(
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
       import.meta.env.VITE_API_KEY
     }&cuisine=${id}`,
@@ -16,8 +15,7 @@ function Category() {
 
   return (
     <section className="py-8">
-      {isLoading && <Loading message={`Loading ${id} foods`} />}
-
+    
       {reqData?.results.length > 0 ? (
         <div className="space-y-6">
           <h1 className="font-bold text-2xl first-letter:uppercase">

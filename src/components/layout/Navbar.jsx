@@ -4,36 +4,41 @@ import SearchBar from "./SearchBar";
 const category = [
 
   {
+    name: "American",
+    url: "/category/american",
+  },
+
+  {
     name: "Indian",
     url: "/category/indian",
   },
+
   {
     name: "Italian",
     url: "/category/italian",
   },
+  
   {
-    name: "American",
-    url: "/category/american",
-  },
-  {
-    name: "Thai",
-    url: "/category/thai",
+    name: "Mexican",
+    url: "/category/mexican",
   },
 
   {
     name: "Spanish",
     url: "/category/spanish",
   },
+  
   {
-    name: "Mexican",
-    url: "/category/mexican",
+    name: "Thai",
+    url: "/category/thai",
   },
+  
 ];
 
 function Navbar() {
   return (
     <>
-      <header className="bg-gray pt-6">
+      <header className="bg-teal-200 pt-6"> 
         <section className="container">
           <div className="flex items-center justify-between gap-4 py-4">
             <Link to="/">

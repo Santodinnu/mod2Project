@@ -1,14 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import RecipeCard from "../components/design/RecipeCard";
-import Loading from "../components/design/Loading";
 import { useFetch } from "../components/hook/useFetch";
 
 function Search() {
   const { id } = useParams();
   const query = id.replaceAll("-", " ");
 
-  const { isLoading, reqData } = useFetch(
+  const { reqData } = useFetch(
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
       import.meta.env.VITE_API_KEY
     }&query=${query}`,
@@ -17,7 +16,6 @@ function Search() {
 
   return (
     <section className="py-8">
-      {isLoading && <Loading message="Searching" />}
 
       <div className="space-y-6">
         <h1 className="font-bold text-2xl">Searched result - {query}</h1>

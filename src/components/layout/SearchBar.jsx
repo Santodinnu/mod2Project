@@ -8,7 +8,6 @@ function SearchBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/search/${searchQuery.trim().replaceAll(" ", "-")}`);
-    // navigate(`/search/${searchQuery}`);
   };
   return (
     <form
