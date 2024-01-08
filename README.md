@@ -12,9 +12,9 @@ Recipe Details: Get detailed information about each recipe, including ingredient
 Filter by Cuisine: Explore recipes from different cuisines to suit your taste preferences.
 
 ## Technologies Used
-React: The app is built using React, providing a seamless and interactive user experience.
-Spoonacular API: Utilizes the Spoonacular API to fetch recipe data and display it in the application.
-Tailwind CSS: Styling is done using Tailwind CSS, ensuring a modern and responsive design.
+### React: The app is built using React, providing a seamless and interactive user experience.
+### Spoonacular API: Utilizes the Spoonacular API to fetch recipe data and display it in the application.
+### Tailwind CSS: Styling is done using Tailwind CSS, ensuring a modern and responsive design.
 
 ## Note -
 
